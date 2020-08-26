@@ -1,0 +1,11 @@
+applications:
+- name: 08-spring-boot-in-memory-db-h2-app
+  disk_quota: 1G
+  instances: 1
+  memory: 1G
+  path: target/sb-ms-h2-db-app.jar
+  buildpack: https://github.com/cloudfoundry/java-buildpack.git
+  routes:
+  - route: 08-spring-boot-in-memory-db-h2-app.cfapps.io
+  - route: sbms02h2.cfapps.io
+  stack: cflinuxfs3

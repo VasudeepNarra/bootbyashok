@@ -1,0 +1,14 @@
+server:
+  port: 3333
+spring:
+  application:
+    name: ZUUL-PROXY-API-GATEWAY
+zuul:
+  prefix: /api
+  routes:
+    ce:
+      path: /ce/**
+      serviceId: CURRENCY-EXCHANGE-SERVICE
+    cc:
+      path: /cc/**
+      serviceId: CURRENCY-CONVERSION-SERVICE
